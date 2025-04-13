@@ -1,0 +1,134 @@
+<!-- guestbook.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERAWALKER - 방명록</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="guestbook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="star-citizen-element sc-stars"></div>
+    
+    <!-- 프로필 이미지 -->
+    <div class="profile-image" onclick="window.location.href='index.html'">
+        <img src="profile.jpg" alt="ERAWALKER 프로필">
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <h1>방명록</h1>
+            <p>방문 흔적을 남겨주세요</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="freeboard.html">자유게시판</a></li>
+            <li><a href="guestbook.html" class="active">방명록</a></li>
+            <li><a href="steam-deals.html">스팀 할인</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="guestbook-intro">
+                    <h2>방명록에 메시지를 남겨주세요</h2>
+                    <p>방문자 여러분의 이야기를 들려주세요. 좋은 말, 격려, 조언이나 그냥 인사만 해도 좋습니다!</p>
+                </div>
+
+                <div class="guestbook-form">
+                    <form id="guestbookForm">
+                        <div class="form-group">
+                            <label for="guestName">이름 (선택사항)</label>
+                            <input type="text" id="guestName" name="guestName" placeholder="익명으로 남기려면 비워두세요">
+                        </div>
+                        <div class="form-group">
+                            <label for="guestMessage">메시지</label>
+                            <textarea id="guestMessage" name="guestMessage" rows="4" required placeholder="방명록에 남기고 싶은 이야기를 적어주세요"></textarea>
+                        </div>
+                        <button type="submit" class="btn">메시지 남기기</button>
+                    </form>
+                </div>
+
+                <div class="guestbook-entries">
+                    <h3>방문자 메시지</h3>
+                    
+                    <!-- 샘플 방명록 엔트리 -->
+                    <div class="guestbook-entry">
+                        <div class="entry-header">
+                            <h4>스타시민</h4>
+                            <span class="entry-date">2023-06-20</span>
+                        </div>
+                        <div class="entry-message">
+                            <p>포트폴리오 정말 멋집니다! 스타 시티즌에 관한 글도 좋았어요. 앞으로도 좋은 컨텐츠 기대할게요.</p>
+                        </div>
+                        <div class="entry-footer">
+                            <span class="entry-reaction"><i class="far fa-heart"></i> 5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="guestbook-entry">
+                        <div class="entry-header">
+                            <h4>역사 애호가</h4>
+                            <span class="entry-date">2023-06-18</span>
+                        </div>
+                        <div class="entry-message">
+                            <p>세계사에 관한 관점이 흥미로웠습니다. 특히 아드리아노플 전투에 관한 글이 인상적이었어요. 혹시 비잔틴 제국에 관한 글도 써주실 수 있을까요?</p>
+                        </div>
+                        <div class="entry-footer">
+                            <span class="entry-reaction"><i class="far fa-heart"></i> 3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="guestbook-entry">
+                        <div class="entry-header">
+                            <h4>익명</h4>
+                            <span class="entry-date">2023-06-15</span>
+                        </div>
+                        <div class="entry-message">
+                            <p>우연히 사이트를 발견했는데 디자인이 정말 멋집니다! 소방 기술에 관한 내용도 매우 유익했어요. 앞으로 자주 방문할게요!</p>
+                        </div>
+                        <div class="entry-footer">
+                            <span class="entry-reaction"><i class="far fa-heart"></i> 7</span>
+                        </div>
+                    </div>
+                    
+                    <div class="guestbook-entry">
+                        <div class="entry-header">
+                            <h4>AI 연구자</h4>
+                            <span class="entry-date">2023-06-10</span>
+                        </div>
+                        <div class="entry-message">
+                            <p>AI에 관한 포스팅 잘 읽었습니다. 기술적 내용과 함께 윤리적 측면도 고려하신 점이 인상적이었어요. 혹시 최근 생성형 AI 모델에 관한 의견도 들을 수 있을까요?</p>
+                        </div>
+                        <div class="entry-footer">
+                            <span class="entry-reaction"><i class="far fa-heart"></i> 4</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guestbook-pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next">다음 <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo"></div>
+            <p>&copy; 2023 ERAWALKER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="guestbook.js"></script>
+</body>
+</html>
